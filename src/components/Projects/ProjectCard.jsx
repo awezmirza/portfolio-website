@@ -1,6 +1,6 @@
+// src/components/Projects/ProjectCard.jsx
 import React from "react";
 import styles from "./ProjectCard.module.css";
-import { getImageUrl } from "../../utils";
 
 export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source },
@@ -8,14 +8,13 @@ export const ProjectCard = ({
   return (
     <div className={styles.container}>
       <img
-        src={getImageUrl(imageSrc)}
+        src={imageSrc}
         alt={`Image of ${title}`}
         className={styles.image}
       />
       <h3 className={styles.title}>{title}</h3>
-      {/* Render formatted description */}
       <p className={styles.description}>
-        {description.split("\n").map((line, index) => (
+        {description.split("\\n").map((line, index) => (
           <React.Fragment key={index}>
             {line}
             <br />
@@ -23,13 +22,11 @@ export const ProjectCard = ({
         ))}
       </p>
       <ul className={styles.skills}>
-        {skills.map((skill, id) => {
-          return (
-            <li key={id} className={styles.skill}>
-              {skill}
-            </li>
-          );
-        })}
+        {skills.map((skill, id) => (
+          <li key={id} className={styles.skill}>
+            {skill}
+          </li>
+        ))}
       </ul>
       <div className={styles.links}>
         <a href={demo} className={styles.link}>

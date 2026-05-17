@@ -51,6 +51,14 @@
   transition: 0.4s;
 }
 
+.aboutIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
 .aboutItem:hover {
   background-size: 100% 100%;
 }

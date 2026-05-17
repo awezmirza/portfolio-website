@@ -7,6 +7,7 @@ import { Intro } from "./components/Intro/Intro";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Projects } from "./components/Projects/Projects";
 import { DSA } from "./components/DSA/DSA";
+import { Experience } from "./components/Experience/Experience";
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
       <Intro />
       <About />
+      <Experience />
       <Projects />
       <Skills />
       <DSA />
